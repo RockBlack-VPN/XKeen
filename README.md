@@ -1,12 +1,18 @@
 # Установка Xkeen на роутер Keenetic
+Оновляем Entware
+`opkg update` и `opkg upgrade`
+Затем устанавливаем Xkeen
 
 ```
 opkg install curl
-
+```
+```
 curl -sOfL https://github.com/RockBlack-VPN/XKeen/blob/main/install.sh
-
+```
+```
 chmod +x ./install.sh
-
+```
+```
 ./install.sh
 ```
 ____
