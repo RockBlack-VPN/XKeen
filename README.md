@@ -10,6 +10,7 @@
         "port": "50000-50030"
       },
 ```
+
 ![Screenshot](https://rockblack.pro/images/xray/Screenshot_270.jpg)
 
 
