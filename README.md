@@ -1,3 +1,17 @@
+# Установка Xkeen на роутер Keenetic
+
+```
+opkg install curl
+
+curl -sOfL https://github.com/RockBlack-VPN/XKeen/blob/main/install.sh
+
+chmod +x ./install.sh
+
+./install.sh
+```
+____
+
+
 # Discord
 Для маршрутизации discord через vless нужно подключиться к роутеру по SSH и прописать 
 ```
