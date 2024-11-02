@@ -1,3 +1,9 @@
+Для моделей `Giga (KN-1010/1011), Ultra (KN-1810), Viva (KN-1910/1912/1913), Hero 4G (KN-2310/KN-2311), Giant (KN-2610), Skipper 4G (KN-2910), Hopper (KN-3810)` используйте для установки архив mipsel — mipsel-installer.tar.gz
+
+Для моделей `Giga SE (KN-2410), Ultra SE (KN-2510), DSL (KN-2010), Launcher DSL (KN-2012), Duo (KN-2110), Skipper DSL (KN-2112), Hopper DSL (KN-3610)` используйте для установки архив mips — mips-installer.tar.gz
+
+Для моделей `Peak (KN-2710), Ultra (KN-1811), Giga (KN-1012), Hopper (KN-3811) и Hopper SE (KN-3812)` используйте для установки архив aarch64 — aarch64-installer.tar.gz
+
 # Установка Xkeen на роутер Keenetic
 Оновляем Entware
 `opkg update` и `opkg upgrade`, затем устанавливаем Xkeen
