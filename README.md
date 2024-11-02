@@ -27,7 +27,7 @@ ____
 
 
 # Supercell
-Для маршрутизации игр от Supercell (Brawlstars, Squad Busters, Clash Royale, Hay Day, ...) через vless нужно подключиться к роутеру по SSH и прописать 
+Для маршрутизации игр от Supercell (Hay Day, Clash of Clans, Boom Beach, Clash Royale, Brawl Stars, Squad Busters) через vless нужно подключиться к роутеру по SSH и прописать 
 ```
 xkeen -ap 80,443,9339
 ```
