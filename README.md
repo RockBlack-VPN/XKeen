@@ -51,3 +51,35 @@ xkeen -ap 80,443,9339
 ```
 xkeen -restart
 ```
+____
+
+# Throne and Liberty
+
+Для маршрутизации игры Throne and Liberty через vless нужно подключиться к роутеру по SSH и прописать 
+```
+xkeen -ap 80,443,10000,11005
+```
+Затем добавить блок в 05_routing.json
+
+```
+{
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "vless-reality",
+        "type": "field",
+        "network": "tcp",
+        "port": "10000,11005"
+      },
+
+```
+
+![Screenshot](https://rockblack.pro/images/xray/Screenshot_272.jpg)
+
+
+Сделать перезагрузку
+```
+xkeen -restart
+```
+
+
+
+
