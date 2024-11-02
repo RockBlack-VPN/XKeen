@@ -14,5 +14,5 @@
 ```
 xkeen -restart
 ```
-![Screenshot](https://rockblack.su/images/xray/Screenshot_270.jpg)
+![Screenshot](https://rockblack.pro/images/xray/Screenshot_270.jpg)
 
