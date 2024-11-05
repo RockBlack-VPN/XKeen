@@ -13,7 +13,7 @@
 opkg install curl
 ```
 ```
-curl -sOfL https://github.com/RockBlack-VPN/XKeen/blob/main/install.sh
+curl -sOfL https://raw.githubusercontent.com/Skrill0/XKeen/main/install.sh
 ```
 ```
 chmod +x ./install.sh
