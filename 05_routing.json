@@ -1,9 +1,9 @@
-// ��������� �������������
+// Настройка маршрутизации
 {
   "routing": {
     "rules": [
 
-      // ����������  |   �������� UDP �����
+      // Блокировка  |   Уязвимые UDP порты
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "block",
@@ -12,7 +12,7 @@
         "port": "135, 137, 138, 139"
       },
 	  
-      // ���������� | ������� � ���������
+      // Блокировка | Реклама и аналитика
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "block",
@@ -23,7 +23,7 @@
       },
 	  
       {
-      // VPS �����������  |  IP ������
+      // VPS подключение  |  IP адреса
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
         "type": "field",
@@ -33,7 +33,7 @@
         ]
       },
 	  
-      // VPS �����������  |  �������� �����
+      // VPS подключение  |  Доменные имена
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
@@ -68,7 +68,7 @@
       },
 
 
-      // ������ �����������  |  ��� ���������
+      // Прямое подключение  |  Все остальное
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "direct",
