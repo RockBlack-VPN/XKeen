@@ -7,7 +7,10 @@
 
 # Установка Xkeen на роутер Keenetic
 Оновляем Entware
-`opkg update` и `opkg upgrade`, затем устанавливаем Xkeen
+```
+opkg update && opkg upgrade
+```
+затем устанавливаем Xkeen
 
 ```
 opkg install curl
