@@ -10,7 +10,7 @@
 ```
 opkg update && opkg upgrade
 ```
-затем устанавливаем Xkeen
+Устанавливаем Xkeen
 
 ```
 opkg install curl
