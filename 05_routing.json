@@ -1,0 +1,80 @@
+// ��������� �������������
+{
+  "routing": {
+    "rules": [
+
+      // ����������  |   �������� UDP �����
+      {
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "block",
+        "type": "field",
+        "network": "udp",
+        "port": "135, 137, 138, 139"
+      },
+	  
+      // ���������� | ������� � ���������
+      {
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "block",
+        "type": "field",
+        "domain": [
+        "appcenter.ms"
+        ]
+      },
+	  
+      {
+      // VPS �����������  |  IP ������
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "vless-reality",
+        "type": "field",
+        "ip": [
+        "ext:geoip_v2fly.dat:google",
+        "ext:geoip_v2fly.dat:twitter"
+        ]
+      },
+	  
+      // VPS �����������  |  �������� �����
+      {
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "vless-reality",
+        "type": "field",
+        "domain": [
+
+        "ext:geosite_v2fly.dat:speedtest",
+        "ext:geosite_v2fly.dat:openai",
+        "ext:geosite_v2fly.dat:discord",
+        "ext:geosite_v2fly.dat:twitter",
+       
+        // hdrezka.ag
+        "get2.fun",
+        "track.adpod.in",
+        "franecki.net",
+        "srv.voidnetwork.cloud",
+        "serv01001.xyz",
+        "stream.voidboost.cc",
+        "hdrezka.ag",
+
+        "whoer.net",
+        "2ip.io"
+        ]
+      },
+      
+      {
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "vless-reality",
+        "type": "field",
+        "network": "tcp",
+        "port": "10000,11005,9339"
+      },
+
+
+      // ������ �����������  |  ��� ���������
+      {
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "direct",
+        "type": "field"
+      }
+
+    ]
+  }
+}
