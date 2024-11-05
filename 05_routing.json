@@ -58,7 +58,7 @@
         "2ip.io"
         ]
       },
-      
+      // Throne and Liberty 10000,11005 |  Supercell 9339
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
