@@ -27,6 +27,14 @@ chmod +x ./install.sh
 > [!TIP]
 > `xkeen generator` - https://rockblack.pro/xkeen_generator.html
 
+Перенести сервисы Keenetic с 443 порта
+```
+ip http ssl port 8443
+```
+Сохранить изменения
+```
+system configuration save
+```
 ____
 
 
