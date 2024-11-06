@@ -112,6 +112,25 @@ xkeen -ap 80,443,10000,11005
 xkeen -restart
 ```
 ____
+
+# Приложение ChatGPT 
+Если не работает приложение ChatGPT, то нужно заблокировать quic (udp 80/443) в firewall кинетика или в `routing.json`
+
+```
+{
+        "network": "udp",
+        "port": "443",
+        "outboundTag": "block",
+        "type": "field"               
+      },
+```
+![Screenshot](https://rockblack.pro/images/xray/Screenshot_295.jpg)
+
+Сделать перезагрузку
+```
+xkeen -restart
+```
+____
 > [!TIP]
 > [VPN на роутер](https://rockblack.pro/price) - WireGuard, AmneziaWG, OpenVPN, Vless, Outline, Socks5
 
