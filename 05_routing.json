@@ -44,6 +44,7 @@
         "ext:geosite_v2fly.dat:openai",
         "ext:geosite_v2fly.dat:discord",
         "ext:geosite_v2fly.dat:twitter",
+	"ext:geosite_v2fly.dat:youtube",
        
         // hdrezka.ag
         "get2.fun",
