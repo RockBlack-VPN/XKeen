@@ -24,6 +24,8 @@ chmod +x ./install.sh
 ```
 ./install.sh
 ```
+
+`xkeen generator` - https://rockblack.pro/xkeen_generator.html
 ____
 
 
