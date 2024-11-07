@@ -6,7 +6,7 @@
 `Peak (KN-2710), Ultra (KN-1811), Giga (KN-1012), Hopper (KN-3811) и Hopper SE (KN-3812)` используйте для установки архив aarch64 — [aarch64-installer](https://bin.entware.net/aarch64-k3.10/installer/aarch64-installer.tar.gz)
 
 # Установка Xkeen на роутер Keenetic
-Оновляем Entware
+Обновляем Entware
 ```
 opkg update && opkg upgrade
 ```
