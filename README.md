@@ -38,7 +38,7 @@ system configuration save
 > [!TIP]
 > `xkeen generator` - https://rockblack.pro/xkeen_generator.html
 > 
-> `MiniToolPartitionWizard` - [Скачать](https://rockblack.pro/soft/MiniToolPartitionWizard.zip)
+> `MiniToolPartitionWizard 12.8` - [Скачать](https://rockblack.pro/soft/MiniToolPartitionWizard.zip)
 ____
 
 
