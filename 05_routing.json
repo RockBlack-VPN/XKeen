@@ -3,7 +3,14 @@
   "routing": {
     "rules": [
 
-      // Блокировка  |   Уязвимые UDP порты
+     // Блокировка quic
+	{
+        "network": "udp",
+        "port": "443",
+        "outboundTag": "block",
+        "type": "field"               
+      },
+	// Блокировка  |   Уязвимые UDP порты
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "block",
