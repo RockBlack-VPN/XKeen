@@ -39,6 +39,8 @@ system configuration save
 > `xkeen generator` - https://rockblack.pro/xkeen_generator.html
 > 
 > `MiniToolPartitionWizard 12.8` - [Скачать](https://rockblack.pro/soft/MiniToolPartitionWizard.zip)
+>
+>  `MobaXterm 24.1` - [Скачать](https://rockblack.pro/soft/MobaXterm.zip)
 ____
 
 
