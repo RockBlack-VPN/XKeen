@@ -39,11 +39,11 @@
 Логин - `root`
 Пароль - `keenetic`
 
-Обновляем Entware
+**Обновляем Entware**
 ```
 opkg update && opkg upgrade
 ```
-Устанавливаем Xkeen
+**Устанавливаем Xkeen**
 
 ```
 opkg install curl
