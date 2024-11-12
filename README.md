@@ -1,9 +1,9 @@
 # Установка OPKG Entware на роутер Keenetic
-`4G (KN-1212), Omni (KN-1410), Extra (KN-1710/1711/1713), Giga (KN-1010/1011), Ultra (KN-1810), Viva (KN-1910/1912/1913), Giant (KN-2610), Hero 4G (KN-2310/2311), Hopper (KN-3810) и Zyxel Keenetic II / III, Extra, Extra II, Giga II / III, Omni, Omni II, Viva, Ultra, Ultra II` используйте для установки архив mipsel — [mipsel-installer](https://bin.entware.net/mipselsf-k3.4/installer/mipsel-installer.tar.gz)
+`4G (KN-1212), Omni (KN-1410), Extra (KN-1710/1711/1713), Giga (KN-1010/1011), Ultra (KN-1810), Viva (KN-1910/1912/1913), Giant (KN-2610), Hero 4G (KN-2310/2311), Hopper (KN-3810) и Zyxel Keenetic II / III, Extra, Extra II, Giga II / III, Omni, Omni II, Viva, Ultra, Ultra II` используйте для установки архив **mipsel** — [mipsel-installer](https://bin.entware.net/mipselsf-k3.4/installer/mipsel-installer.tar.gz)
 
-`Ultra SE (KN-2510), Giga SE (KN-2410), DSL (KN-2010), Duo (KN-2110), Ultra SE (KN-2510),  Hopper DSL (KN-3610) и Zyxel Keenetic DSL, LTE, VOX` используйте для установки архив mips — [mips-installer](https://bin.entware.net/mipssf-k3.4/installer/mips-installer.tar.gz)
+`Ultra SE (KN-2510), Giga SE (KN-2410), DSL (KN-2010), Duo (KN-2110), Ultra SE (KN-2510),  Hopper DSL (KN-3610) и Zyxel Keenetic DSL, LTE, VOX` используйте для установки архив **mips** — [mips-installer](https://bin.entware.net/mipssf-k3.4/installer/mips-installer.tar.gz)
 
-`Peak (KN-2710), Ultra (KN-1811), Giga (KN-1012), Hopper (KN-3811) и Hopper SE (KN-3812)` используйте для установки архив aarch64 — [aarch64-installer](https://bin.entware.net/aarch64-k3.10/installer/aarch64-installer.tar.gz)
+`Peak (KN-2710), Ultra (KN-1811), Giga (KN-1012), Hopper (KN-3811) и Hopper SE (KN-3812)` используйте для установки архив **aarch64** — [aarch64-installer](https://bin.entware.net/aarch64-k3.10/installer/aarch64-installer.tar.gz)
 
 **Установите на роутер нужные компоненты OPKG**
 
