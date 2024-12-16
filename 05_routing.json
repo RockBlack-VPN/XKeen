@@ -52,6 +52,7 @@
         "ext:geosite_v2fly.dat:discord",
         "ext:geosite_v2fly.dat:twitter",
 	"ext:geosite_v2fly.dat:youtube",
+	"ext:geosite_v2fly.dat:facebook",
 	"ext:geosite_v2fly.dat:instagram",
 	"ext:geosite_v2fly.dat:tiktok",
 	"ext:geosite_v2fly.dat:netflix",
