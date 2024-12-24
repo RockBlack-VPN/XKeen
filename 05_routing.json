@@ -84,7 +84,7 @@
         "port": "10000,11005,9339"
       },
 	    
-     // Discord 50000:50030
+      // Discord 50000:50030
 	    {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
