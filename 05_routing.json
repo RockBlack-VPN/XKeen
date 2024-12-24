@@ -85,7 +85,7 @@
       },
 	    
       // Discord 50000:50030
-	    {
+      {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
         "type": "field",
