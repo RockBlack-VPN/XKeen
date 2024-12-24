@@ -83,7 +83,15 @@
         "network": "tcp",
         "port": "10000,11005,9339"
       },
-
+	    
+     // Discord 50000:50030
+	    {
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "vless-reality",
+        "type": "field",
+        "network": "udp",
+        "port": "50000-50030"
+      },
 
       // Прямое подключение  |  Все остальное
       {
