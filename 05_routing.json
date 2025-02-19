@@ -1,7 +1,8 @@
 // Настройка маршрутизации
 {
-  "routing": {
-    "rules": [
+"routing": {
+"domainStrategy": "IPIfNonMatch",
+"rules": [
 
      // Блокировка quic
 	{
