@@ -91,6 +91,7 @@ ____
 ```
 
 ![Screenshot](https://rockblack.pro/images/xray/Screenshot_2.jpg)
+
 ![Screenshot](https://rockblack.pro/images/xray/Screenshot_1.jpg)
 
 Выполните команду, чтобы скачать скрипт установки:
