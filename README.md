@@ -106,7 +106,7 @@ chmod +x install_xray.sh
 ./install_xray.sh update
 ```
 
-Для проверки версии ядра xray выполните команду
+Для проверки версии ядра xray выполните команду:
 ```
 xray -version
 ```
