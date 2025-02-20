@@ -90,6 +90,29 @@ ____
 "domainStrategy": "IPIfNonMatch",
 ```
 
+![Screenshot](https://rockblack.pro/images/xray/Screenshot_2.jpg)
+![Screenshot](https://rockblack.pro/images/xray/Screenshot_1.jpg)
+
+Выполните команду, чтобы скачать скрипт установки:
+```
+curl -s -S -L -O https://github.com/Corvus-Malus/XKeen-docs/raw/main/Installer/install_xray.sh
+```
+Сделайте скрипт исполняемым:
+```
+chmod +x install_xray.sh
+```
+Выполните скрипт с параметром install для обновления:
+```
+./install_xray.sh update
+```
+
+Для восстановления оригинального файла xray (откат обновления)
+
+Выполните скрипт с параметром recover:
+```
+./install_xray.sh recover
+```
+
 # Discord
 Для маршрутизации discord через vless нужно подключиться к роутеру по SSH и прописать 
 ```
