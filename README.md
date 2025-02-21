@@ -84,7 +84,7 @@ system configuration save
 >  `MobaXterm 24.1` - [Скачать](https://rockblack.pro/soft/MobaXterm.zip)
 ____
 
-# Обновление ядра XRAY до последней версии
+# Обновление ядра XRAY на роутере Keenetic
 Перед обновлением Xray для обеспечения корректной работы XKeen необходимо удалить файл **02_transport.json** из директории **opkg\etc\xray\configs**. Обратите внимание, что в новой версии этот файл больше не используется, поэтому возвращать его не нужно. После этого добавьте в верхнюю часть файла **05_routing.json** следующую строку:
 ```
 "domainStrategy": "IPIfNonMatch",
