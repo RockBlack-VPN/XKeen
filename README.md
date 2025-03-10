@@ -145,7 +145,9 @@ xkeen -ap 80,443,50000:50030
 ```
 xkeen -restart
 ```
-2-й способ
+
+**2-й способ**
+
 Добавить ip адреса в 05_routing.json
 ```
 "91.105.192.0/23",  
@@ -162,6 +164,10 @@ xkeen -restart
 "149.154.172.0/22",  
 "185.76.151.0/24",  
 "199.247.24.0/24",
+```
+
+```
+xkeen -restart
 ```
 
 ![Screenshot](https://rockblack.pro/images/xray/Screenshot_89.jpg)
