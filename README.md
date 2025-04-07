@@ -57,7 +57,7 @@ opkg update && opkg upgrade
 opkg install curl
 ```
 ```
-curl -sOfL https://raw.githubusercontent.com/Skrill0/XKeen/main/install.sh
+curl -sOfL https://raw.githubusercontent.com/RockBlack-VPN/XKeen/main/install.sh
 ```
 ```
 chmod +x ./install.sh
