@@ -68,6 +68,8 @@ chmod +x ./install.sh
 
 
 **Перенести сервисы Keenetic с 443 порта**
+
+Данная команда вводится в CLI роутера
 ```
 ip http ssl port 8443
 ```
