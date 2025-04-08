@@ -78,7 +78,7 @@ ip http ssl port 8443
 system configuration save
 ```
 
-> [!TIP]
+> [!Soft]
 > `xkeen generator` - https://rockblack.pro/xkeen_generator.html
 > 
 > `MiniToolPartitionWizard 12.8` - [Скачать](https://rockblack.pro/soft/MiniToolPartitionWizard.zip)
