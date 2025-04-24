@@ -62,6 +62,8 @@
 	"ext:geosite_v2fly.dat:telegram",
 	"ext:geosite_v2fly.dat:spotify",
 	"ext:geosite_v2fly.dat:autodesk",
+	"ext:geosite_v2fly.dat:google-gemini",
+		
         "cloudflare-ech.com",
 	"rutracker.org",
 	"rutracker.net",
