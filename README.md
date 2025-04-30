@@ -79,7 +79,7 @@ system configuration save
 ```
 
 > [!TIP]
-> `xkeen generator` - https://rockblack.pro/xkeen_generator.html
+> `xkeen generator` - https://rockblack.pro/xkeen_generator
 > 
 > `MiniToolPartitionWizard 12.8` - [Скачать](https://rockblack.pro/soft/MiniToolPartitionWizard.zip)
 >
