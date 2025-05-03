@@ -148,7 +148,7 @@ tar cvzf /opt/entware_backup.tar.gz --exclude=/opt/entware_backup.tar.gz -C /opt
 Ваш бэкап полностью развернут со всеми настройками.
 
 
-
+___
 
 # Discord
 Для маршрутизации discord через vless нужно подключиться к роутеру по SSH и прописать 
