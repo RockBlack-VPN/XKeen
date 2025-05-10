@@ -124,6 +124,27 @@ ___________________________________________________________________
 ```
 ____________________________________________________________________
 
+
+## Нет подключения по SSH к Entware
+
+Зайти на роутер по Telnet - `192.168.1.1`
+
+Логин - `admin` и ваш пароль от роутера (не путать пароль от Entware)
+
+Выполнить команды 
+```
+exec sh
+```
+```
+rm -f /opt/var/run/dropbear.pid
+```
+```
+/opt/etc/init.d/S51dropbear restart
+```
+![Screenshot](https://rockblack.pro/images/github/Screenshot_2.jpg)
+
+____
+
 # Backup Entware + XKeen
 
 Резервное копирование для быстрого развертывания на новом носителе или восстановления на текущем
@@ -295,23 +316,7 @@ xkeen -restart
 ```
 ____
 
-## Нет подключения по SSH к Entware
 
-Зайти на роутер по Telnet - `192.168.1.1`
-
-Логин - `admin` и ваш пароль от роутера (не путать пароль от Entware)
-
-Выполнить команды 
-```
-exec sh
-```
-```
-rm -f /opt/var/run/dropbear.pid
-```
-```
-/opt/etc/init.d/S51dropbear restart
-```
-![Screenshot](https://rockblack.pro/images/github/Screenshot_2.jpg)
 
 > [!TIP]
 > [VPN на роутер](https://rockblack.pro/price) - WireGuard, AmneziaWG, OpenVPN, Vless, Outline, Socks5
