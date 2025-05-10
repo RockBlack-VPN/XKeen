@@ -294,6 +294,22 @@ ____
 xkeen -restart
 ```
 ____
+
+## Нет подключения по SSH к Entware
+
+Зайти на роутер по Telnet
+Выполнить команды 
+```
+exec sh
+```
+```
+rm -f /opt/var/run/dropbear.pid
+```
+```
+/opt/etc/init.d/S51dropbear restart
+```
+![Screenshot](https://rockblack.pro/images/github/Screenshot_2.jpg)
+
 > [!TIP]
 > [VPN на роутер](https://rockblack.pro/price) - WireGuard, AmneziaWG, OpenVPN, Vless, Outline, Socks5
 
