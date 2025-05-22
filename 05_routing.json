@@ -76,7 +76,14 @@
 	"themoviedb.org",
 	"image.tmdb.org",
 	"4pda.to",
-
+		
+	// HMA	
+        "hidemyass.com",
+        "my.hidemyass.com",
+        "vanheim.ff.avast.com",
+        "slc.ff.avast.com",
+        "analytics.ff.avast.com",
+        "firebaselogging-pa.googleapis.com",
 		
 	// viber
 	"viber.com",
