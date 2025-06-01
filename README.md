@@ -141,6 +141,9 @@ rm -f /opt/var/run/dropbear.pid
 ```
 /opt/etc/init.d/S51dropbear restart
 ```
+
+После введенных команд, подключайтесь по SSH к Entware
+
 ![Screenshot](https://rockblack.pro/images/github/Screenshot_2.jpg)
 
 ____
