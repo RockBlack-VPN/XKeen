@@ -21,14 +21,21 @@
       },
 	  
       // Блокировка | Реклама и аналитика
-      {
+       {
+        "type": "field",
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "block",
-        "type": "field",
         "domain": [
-        "appcenter.ms"
+          "ext:geosite_v2fly.dat:category-ads-all",
+          "google-analytics",
+          "analytics.yandex",
+          "appcenter.ms",
+          "app-measurement.com",
+          "firebase.io",
+          "crashlytics.com"
         ]
       },
+	  
 	  
       {
       // VPS подключение  |  IP адреса
