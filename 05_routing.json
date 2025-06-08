@@ -22,7 +22,6 @@
 	  
       // Блокировка | Реклама и аналитика
        {
-        "type": "field",
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "block",
         "domain": [
