@@ -1,0 +1,141 @@
+# Общие настройки
+socks-port: 7777               # SOCKS5 proxy port (если нужен прямой доступ к SOCKS5 прокси)
+listeners:
+  - name: tproxy
+    type: tproxy
+    port: 4000
+allow-lan: true                # Разрешить подключения из локальной сети.
+mode: rule                     # Режим работы: rule (по правилам), global (через один прокси), direct (напрямую)
+log-level: silent                # Уровень логирования: debug, info, warning, error, silent
+external-controller: '0.0.0.0:9090' 
+external-ui: ui
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/releases/latest/download/compressed-dist.tgz"
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  sniff:
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+    TLS:
+      ports:
+      - 443
+      - 8443
+
+# Настройки DNS (Mihomo может выступать как DNS-сервер)
+dns:
+  enable: false                # Сейчас выключен. Работают DNS, настроенные в самом роутере
+  listen: 0.0.0.0:5353         # Порт для DNS-запросов (не используйте 53, если он занят DNS-сервером Keenetic)
+  ipv6: false                  # В нашем конфиге мы не используем IPv6
+  default-nameserver:
+    - 223.5.5.5                # DNS-серверы по умолчанию
+    - 114.114.114.114
+  enhanced-mode: fake-ip       # fake-ip или redir-host
+  fake-ip-range: 198.18.0.1/16 # Диапазон для fake-ip
+  nameserver:
+    - https://dns.google/dns-query # DNS over HTTPS
+    - tls://dns.google:853         # DNS over TLS
+  fallback:                      # Резервные DNS, если основные не отвечают
+    - https://1.1.1.1/dns-query
+
+# --- ВАШИ ПРОКСИ-СЕРВЕРЫ ---
+proxy-providers:
+  sub:
+    type: http
+    url: https://ссылкаподписки # Вот сюда вставьте свою ссылку подписки на прокси (ВПН)
+    patch: ./proxy_providers/base64.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 5000
+      lazy: true
+      expected-status: 204
+    override:
+      tfo: true
+      mptcp: true
+      udp: true
+
+# --- ГРУППЫ ПРОКСИ (ПОЛИТИКИ) ---
+proxy-groups:
+  - name: MIHOMO
+    type: select # Тип группы: select (ручной выбор), url-test (автовыбор по скорости), fallback (переключение при отказе)
+    use:
+      - sub
+#    url: http://www.gstatic.com/generate_204  # URL для тестирования
+#    interval: 300  # Интервал проверки (сек)
+
+# --- ПОДПИСКИ НА ПРАВИЛА МАРШРУТИЗАЦИИ ---
+rule-providers:
+  discord_domains:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geosite/discord.mrs
+    path: ./rule-sets/discord_domains.mrs
+    interval: 86400
+  discord_voiceips:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/other/discord-voice-ip-list.mrs
+    path: ./rule-sets/discord_voiceips.mrs
+    interval: 86400
+  refilter_domains:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/re-filter/domain-rule.mrs
+    path: ./re-filter/domain-rule.mrs
+    interval: 86400
+  refilter_ipsum:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/re-filter/ip-rule.mrs
+    path: ./re-filter/ip-rule.mrs
+    interval: 86400
+  oisd_big:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/oisd/big.mrs
+    path: ./oisd/big.mrs
+    interval: 86400
+  torrent-trackers:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/other/torrent-trackers.mrs
+    path: ./rule-sets/torrent-trackers.mrs
+    interval: 86400
+  torrent-clients:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/other/torrent-clients.yaml
+    path: ./rule-sets/torrent-clients.yaml
+    interval: 86400
+  ru-bundle:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/ru-bundle/rule.mrs
+    path: ./ru-bundle/rule.mrs
+    interval: 86400
+
+# --- ПРАВИЛА МАРШРУТИЗАЦИИ ---
+rules:
+  - OR,((DOMAIN,ipwho.is),(DOMAIN,api.ip.sb),(DOMAIN,ipapi.co),(DOMAIN,ipinfo.io)),MIHOMO
+  - RULE-SET,oisd_big,REJECT
+  - OR,((RULE-SET,torrent-clients),(RULE-SET,torrent-trackers)),DIRECT
+  - OR,((RULE-SET,discord_domains),(RULE-SET,discord_voiceips)),MIHOMO
+  - RULE-SET,ru-bundle,MIHOMO
+  - RULE-SET,refilter_domains,MIHOMO
+  - RULE-SET,refilter_ipsum,MIHOMO
+  - MATCH,DIRECT # это самая нижная строка правил
