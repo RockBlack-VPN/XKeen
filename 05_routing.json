@@ -133,7 +133,7 @@
         "2ip.io"
         ]
       },
-      // Throne and Liberty 10000,11005 |  Supercell 9339
+      // Throne and Liberty 10000,11005 |  Supercell 9339 |  viber 9443,2233,543
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
