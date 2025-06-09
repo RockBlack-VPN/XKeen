@@ -84,6 +84,26 @@
 	"4pda.to",
 		
 	// viber
+	"es.amplreq.com",  
+	"aloha46.viber.com",  
+	"venetia.iad.appboy.com",  
+	"firebase-settings.crashlytics.com",  
+	"acr.amplreq.com",  
+	"s-bid.rmp.rakuten.com",  
+	"content.cdn.viber.com",  
+	"app.adjust.com",  
+	"app.adjust.io",  
+	"googleads.g.doubleclick.net",  
+	"media.cdn.viber.com",  
+	"dl-media.viber.com",  
+	"mads.amazon-adsystem.com",  
+	"s.amazon-adsystem.com",  
+	"aax.amazon-adsystem.com",  
+	"c.amazon-adsystem.com",  
+	"web.whatsapp.com",  
+	"firebaselogging-pa.googleapis.com",  
+	"api.mixpanel.com",  
+	"data-event-proxy.viber.com",
 	"viber.com",
 	"viber.me",
 	"viber.co",
@@ -119,7 +139,7 @@
         "outboundTag": "vless-reality",
         "type": "field",
         "network": "tcp",
-        "port": "10000,11005,9339"
+        "port": "10000,11005,9339,9443,2233,543"
       },
 	    
       // Discord 50000:50030
