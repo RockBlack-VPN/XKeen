@@ -121,13 +121,13 @@
         "2ip.io"
         ]
       },
-      // Throne and Liberty 10000,11005 |  Supercell 9339 |  viber 9443,2233,543
+      // Throne and Liberty 10000,11005 |  Supercell 9339 |  viber 9443,2233,543 |  Minecraft Java 25565
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
         "type": "field",
         "network": "tcp",
-        "port": "10000,11005,9339,9443,2233,543"
+        "port": "10000,11005,9339,9443,2233,543,25565"
       },
 	    
       // Discord 50000:50030
