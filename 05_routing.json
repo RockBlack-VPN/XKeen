@@ -72,7 +72,8 @@
 	"ext:geosite_v2fly.dat:soundcloud",
 	"ext:geosite_v2fly.dat:linkedin",
 	"ext:geosite_v2fly.dat:notion",
-		
+
+	"domain:grok.com",
 	"manus.im",	
         "cloudflare-ech.com",
 	"rutracker.org",
