@@ -1,0 +1,185 @@
+listeners:
+  - name: tproxy
+    type: tproxy
+    port: 1181
+mixed-port: 1080
+allow-lan: true
+mode: rule
+log-level: silent
+ipv6: false
+external-controller: 0.0.0.0:9090
+external-ui: ./zash
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip"
+geodata-mode: true
+profile:
+  store-selected: true
+
+# --- НАСТРОЙКИ СНИФФЕРА ---
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  force-dns-mapping: true
+  sniff:
+    HTTP:
+      ports: [80]
+    TLS:
+      ports: [443]
+    QUIC:
+      ports: [443]
+
+# --- ПРОВАЙДЕР ПРОКСИ-СЕРВЕРОВ (ПОДПИСКА) ---
+proxy-providers:
+  subscription:
+    type: http
+    url: https://your_sub_domain/sub               #  <------------ ЗДЕСЬ ВСТАВИТЬ ССЫЛКУ НА ВАШУ ПОДПИСКУ
+    path: ./proxy-providers/subscription.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.msftncsi.com/ncsi.txt
+      interval: 20
+
+# --- СЕКЦИЯ DNS ---
+dns:
+  enable: true
+  default-nameserver:
+    - 1.1.1.1
+    - 208.67.222.222
+    - 9.9.9.9
+  nameserver:
+    - https://doh.opendns.com/dns-query
+    - https://mozilla.cloudflare-dns.com/dns-query
+    - tls://dns.adguard-dns.com
+    - tls://one.one.one.one
+  direct-nameserver:
+    - 1.1.1.1
+    - 208.67.222.222
+    - 9.9.9.9
+  fallback:
+    - tls://1.1.1.1
+    - tls://9.9.9.9
+    - tls://dns.opendns.com
+    - https://doh.opendns.com/dns-query
+    - https://mozilla.cloudflare-dns.com/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: RU
+    ipcidr:
+      - 240.0.0.0/4
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+      - '+.twitter.com'
+      - '+.instagram.com'
+      - '+.github.com'
+
+# --- ГРУППЫ ПРОКСИ ---
+proxy-groups:
+  # Главный переключатель режимов.
+  - name: MAIN MODE
+    type: select
+    proxies:
+      - PROXY AUTO     # Полностью автоматический режим
+      - PROXY MANUAL   # Ручной выбор
+      - DIRECT        # Принудительный прямой доступ
+
+  # Группа для автоматического режима.
+  # Логика: Сначала пытается использовать самый быстрый прокси (PROXY FASTEST).
+  # Если он падает, переключается на группу PROXY FAILOVER, которая переберет все остальные живые прокси.
+  # Если и там все мертвы, переключится на DIRECT.
+  - name: PROXY AUTO
+    type: fallback
+    proxies:
+      - PROXY FASTEST
+      - PROXY FAILOVER
+      - DIRECT
+    url: http://www.msftncsi.com/ncsi.txt
+    # Интервал для проверки, чтобы "отлипнуть" от DIRECT/PROXY FAILOVER и вернуться к PROXY FASTEST
+    interval: 200
+
+  # Группа для выбора самого быстрого из ЖИВЫХ прокси.
+  - name: PROXY FASTEST
+    type: url-test
+    use:
+      - subscription
+    url: http://www.msftncsi.com/ncsi.txt
+    # Интервал для пересортировки живых прокси по скорости
+    interval: 300
+    lazy: false
+
+  # Группа для перебора ВСЕХ живых прокси в случае отказа самого быстрого.
+  # Это гарантирует, что мы не переключимся на DIRECT, пока есть хоть один живой прокси.
+  - name: PROXY FAILOVER
+    type: fallback
+    use:
+      - subscription
+    url: http://www.msftncsi.com/ncsi.txt
+    interval: 200
+
+  # Группа для ручного выбора сервера из подписки.
+  - name: PROXY MANUAL
+    type: select
+    use:
+      - subscription
+
+  # Скрыть группу GLOBAL
+  - name: GLOBAL
+    type: select
+    hidden: true
+    proxies:
+      - PROXY AUTO
+      - PROXY MANUAL
+      - PROXY FASTEST
+      - PROXY FAILOVER
+      - DIRECT
+
+# --- НАСТРОЙКИ GEO-ДАННЫХ ---
+geox-url:
+  geosite: "https://github.com/v2fly/domain-list-community/releases/latest/download/dlc.dat"
+  geoip: "https://github.com/0FL01/meta-rules-dat_for_RU_region/releases/latest/download/geoip.dat"
+
+# --- ПРОВАЙДЕРЫ ПРАВИЛ --- (здесь добавлена блокировка рекламы из оидс)
+rule-providers:
+  oisd_big:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://github.com/legiz-ru/mihomo-rule-sets/raw/main/oisd/big.mrs
+    path: ./oisd/big.mrs
+    interval: 86400
+
+# --- ПРАВИЛА МАРШРУТИЗАЦИИ ---
+rules:
+  # ПРАВИЛО №0: Блокировки
+  - GEOSITE,category-ads-all,REJECT
+  - RULE-SET,oisd_big,REJECT
+
+  # ПРАВИЛО №1: Домен подписки всегда напрямую
+  - DOMAIN-SUFFIX,your-domain.com,DIRECT  # <----- ЗДЕСЬ УКАЗАТЬ ДОМЕНЫ ПОДПИСКИ, добавленые в "url: https://your_sub_domain/sub" (Если есть, т.е опционально)
+
+  # ПРАВИЛО №2: Прямое соединение для BitTorrent
+  - DST-PORT,6881-6889,DIRECT
+  - DST-PORT,51413,DIRECT
+
+  # ПРАВИЛО №3: Прямое соединение для российских и прочих доменов
+  - GEOSITE,category-ru,DIRECT
+  - GEOSITE,category-gov-ru,DIRECT
+  - DOMAIN-SUFFIX,ru,DIRECT
+  - DOMAIN-SUFFIX,xn--p1ai,DIRECT
+  - GEOSITE,steam,DIRECT
+  - GEOSITE,alibaba,DIRECT
+  - GEOSITE,MOZILLA,DIRECT
+  - GEOSITE,XIAOMI,DIRECT
+  - GEOSITE,CN,DIRECT
+  - DOMAIN-SUFFIX,avito.st,DIRECT
+  - DOMAIN-SUFFIX,googlevideo.com,MAIN MODE
+
+  # ПРАВИЛО №4: Прямое соединение для российских IP
+  - GEOIP,RU,DIRECT
+
+  # ПРАВИЛО №5: Блокировка QUIC
+  - AND,((NETWORK,UDP),(DST-PORT,443)),REJECT
+
+  # ПРАВИЛО №6: Весь остальной трафик через ГЛАВНУЮ группу управления
+  - MATCH,MAIN MODE
