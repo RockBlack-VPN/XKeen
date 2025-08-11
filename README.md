@@ -83,7 +83,7 @@ system configuration save
 > 
 > `routing generator` -https://xray-routing-generator.netlify.app
 > 
-> `xkeen generator` - https://rockblack.pro/mihomo_generator
+> `mihomo generator` - https://rockblack.pro/mihomo_generator
 > 
 > `MiniToolPartitionWizard 12.8` - [Скачать](https://rockblack.pro/soft/MiniToolPartitionWizard.zip)
 >
