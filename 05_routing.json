@@ -54,10 +54,10 @@
         "type": "field",
         "domain": [
 
-        "ext:geosite_v2fly.dat:speedtest",
-        "ext:geosite_v2fly.dat:openai",
-        "ext:geosite_v2fly.dat:discord",
-        "ext:geosite_v2fly.dat:twitter",
+    "ext:geosite_v2fly.dat:speedtest",
+    "ext:geosite_v2fly.dat:openai",
+    "ext:geosite_v2fly.dat:discord",
+    "ext:geosite_v2fly.dat:twitter",
 	"ext:geosite_v2fly.dat:youtube",
 	"ext:geosite_v2fly.dat:facebook",
 	"ext:geosite_v2fly.dat:instagram",
@@ -66,6 +66,7 @@
 	"ext:geosite_v2fly.dat:tidal",
 	"ext:geosite_v2fly.dat:intel",
 	"ext:geosite_v2fly.dat:telegram",
+	"ext:geosite_v2fly.dat:whatsapp",
 	"ext:geosite_v2fly.dat:spotify",
 	"ext:geosite_v2fly.dat:autodesk",
 	"ext:geosite_v2fly.dat:google-gemini",
