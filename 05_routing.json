@@ -66,6 +66,7 @@
 	"ext:geosite_v2fly.dat:tidal",
 	"ext:geosite_v2fly.dat:intel",
 	"ext:geosite_v2fly.dat:telegram",
+	"ext:geoip_v2fly.dat:telegram",
 	"ext:geosite_v2fly.dat:whatsapp",
 	"ext:geosite_v2fly.dat:whatsapp-ads",
 	"ext:geosite_v2fly.dat:spotify",
