@@ -50,18 +50,18 @@
 
 	 // VPS подключение  |  Telegram
       {
-  "inboundTag": ["redirect", "tproxy"],
-  "outboundTag": "vless-reality",
-  "type": "field",
-  "network": "tcp,udp",
-  "port": "596-599,1400,5222",
-  "domain": [
-    "ext:geosite_v2fly.dat:telegram"
-  ],
-  "ip": [
-    "ext:geoip_v2fly.dat:telegram"
-  ]
-},
+  		"inboundTag": ["redirect", "tproxy"],
+ 		"outboundTag": "vless-reality",
+  		"type": "field",
+  		"network": "tcp,udp",
+  		"port": "596-599,1400,5222",
+  		"domain": [
+    	"ext:geosite_v2fly.dat:telegram"
+  		],
+  		"ip": [
+    	"ext:geoip_v2fly.dat:telegram"
+  		]
+	  },
 
 	
       // VPS подключение  |  Доменные имена
