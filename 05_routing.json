@@ -46,7 +46,22 @@
         "ext:geoip_v2fly.dat:twitter"
         ]
       },
-	  
+
+      {
+  "inboundTag": ["redirect", "tproxy"],
+  "outboundTag": "vless-reality",
+  "type": "field",
+  "network": "tcp,udp",
+  "port": "596-599,1400,5222",
+  "domain": [
+    "ext:geosite_v2fly.dat:telegram"
+  ],
+  "ip": [
+    "ext:geoip_v2fly.dat:telegram"
+  ]
+},
+
+	
       // VPS подключение  |  Доменные имена
       {
         "inboundTag": ["redirect", "tproxy"],
@@ -65,8 +80,6 @@
 	"ext:geosite_v2fly.dat:netflix",
 	"ext:geosite_v2fly.dat:tidal",
 	"ext:geosite_v2fly.dat:intel",
-	"ext:geosite_v2fly.dat:telegram",
-	"ext:geoip_v2fly.dat:telegram",
 	"ext:geosite_v2fly.dat:whatsapp",
 	"ext:geosite_v2fly.dat:whatsapp-ads",
 	"ext:geosite_v2fly.dat:spotify",
