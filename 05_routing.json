@@ -47,6 +47,8 @@
         ]
       },
 
+
+	 // VPS подключение  |  Telegram
       {
   "inboundTag": ["redirect", "tproxy"],
   "outboundTag": "vless-reality",
