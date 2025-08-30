@@ -43,15 +43,25 @@
         "type": "field",
         "ip": [
         "ext:geoip_v2fly.dat:google",
+        "ext:geoip_v2fly.dat:twitter"
+        ]
+      },
+
+	{
+  		"inboundTag": ["redirect", "tproxy"],
+ 		"outboundTag": "vless-reality",
+  		"type": "field",
+  		"network": "tcp,udp",
+  		"port": "3478,46420",
+		"ip": [
 		"157.240.0.0/16",
 		"69.63.176.0/20",
 		"66.220.144.0/20",
 		"31.13.24.0/21",
 		"31.13.64.0/18",
-		"31.13.80.0/20",
-        "ext:geoip_v2fly.dat:twitter"
-        ]
-      },
+		"31.13.80.0/20"
+  		]
+	  },
 
 
 	 // VPS подключение  | Для работы Telegram открыть порты xkeen -ap 80,443,596:599,1400,5222
