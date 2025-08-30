@@ -37,7 +37,7 @@
 	  
 	  
       {
-      // VPS подключение  |  IP адреса | Для работы WhatsApp открыть порты xkeen -ap 443,3478,46420
+      // VPS подключение  |  IP адреса | Для работы WhatsApp открыть порты xkeen -ap 80,443,3478,46420
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
         "type": "field",
@@ -54,7 +54,7 @@
       },
 
 
-	 // VPS подключение  | Для работы Telegram открыть порты xkeen -ap 596:599,1400,5222
+	 // VPS подключение  | Для работы Telegram открыть порты xkeen -ap 80,443,596:599,1400,5222
       {
   		"inboundTag": ["redirect", "tproxy"],
  		"outboundTag": "vless-reality",
