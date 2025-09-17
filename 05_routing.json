@@ -109,7 +109,16 @@
 	"themoviedb.org",
 	"image.tmdb.org",
 	"4pda.to",
-		
+
+	// kino.pub
+	"firebase-settings.crashlytics.com",
+	"firebaseinstallations.googleapis.com",
+	"kp-pro.cloud",
+	"firebaseremoteconfigrealtime.googleapis.com",
+	"firebaseremoteconfig.googleapis.com",
+	"cdn32.lol",
+	"kino.pub",
+			
 	// viber
 	"domain:viber.com",
  	"domain:viber.me",
