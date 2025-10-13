@@ -145,16 +145,25 @@
 	"api.mixpanel.com",  
 	"data-event-proxy.viber.com",
 	"s-bid.rmp.rakuten.com",
-
-		
-        // hdrezka.ag
-        "stream.voidboost.cc",
-        "hdrezka.ag",
+			
+    //claude			
+	"claude.ai",
+	"claude.com",
+	"a-cdn.anthropic.com",
+	"statsig.anthropic.com",
+	"s-cdn.anthropic.com",
+	"a-cdn.claude.ai",
+	"widget.intercom.io",
+	"a-api.anthropic.com",
+        
+	// hdrezka.ag
+    "stream.voidboost.cc",
+    "hdrezka.ag",
 		
 	// IP address
-        "whoer.net",
+    "whoer.net",
 	"check-host.net",
-        "2ip.io"
+    "2ip.io"
         ]
       },
       // Throne and Liberty 10000,11005 |  Supercell 9339 |  viber 9443,2233,543 |  Minecraft Java 25565
