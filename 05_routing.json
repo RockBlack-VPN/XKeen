@@ -247,6 +247,15 @@
         "31.13.80.0/20"
   		]
 	  },
+
+	      {
+        "type": "field",
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "direct",
+        "protocol": [
+          "bittorrent"
+        ]
+      },
       // Прямое подключение  |  Все остальное
       {
         "inboundTag": ["redirect", "tproxy"],
