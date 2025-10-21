@@ -5,7 +5,7 @@
 
 `Ultra SE (KN-2510), Giga SE (KN-2410), DSL (KN-2010), Duo (KN-2110), Ultra SE (KN-2510),  Hopper DSL (KN-3610) и Zyxel Keenetic DSL, LTE, VOX` используйте для установки архив **mips** — [mips-installer](https://bin.entware.net/mipssf-k3.4/installer/mips-installer.tar.gz)
 
-`Peak (KN-2710), Ultra (KN-1811), Giga (KN-1012), Hopper (KN-3811) и Hopper SE (KN-3812)` используйте для установки архив **aarch64** — [aarch64-installer](https://bin.entware.net/aarch64-k3.10/installer/aarch64-installer.tar.gz)
+`Peak (KN-2710), Ultra (KN-1811), Ultra (NC-1812), Giga (KN-1012), Hopper (KN-3811) и Hopper SE (KN-3812)` используйте для установки архив **aarch64** — [aarch64-installer](https://bin.entware.net/aarch64-k3.10/installer/aarch64-installer.tar.gz)
 
 **Установите на роутер нужные компоненты OPKG**
 
