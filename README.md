@@ -160,7 +160,7 @@ ____
 
 Подключаемся к роутеру по SSH и вводим команду:
 ```
-tar cvzf /opt/entware_backup.tar.gz --exclude=/opt/entware_backup.tar.gz -C /opt .
+opkg install tar && tar czvf /opt/entware_backup.tar.gz --exclude="/opt/entware_backup.tar.gz" -C /opt .
 ```
 
 Переходим на текущий накопитель и копируем архив entware_backup.tar.gz (полный бэкап вашей флешки) в удобное для вас место, например, на рабочий стол.
