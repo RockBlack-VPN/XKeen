@@ -46,28 +46,27 @@
         "ext:geoip_v2fly.dat:twitter"
         ]
       },
-	
 
 
 	 // VPS подключение  | Для работы Telegram открыть порты xkeen -ap 80,443,596:599,1400,5222
-{
-  "inboundTag": ["redirect", "tproxy"],
-  "outboundTag": "vless-reality",
-  "type": "field",
-  "network": "tcp,udp",
-  "port": "80,443,596-599,1400,5222",
-  "ip": [
- "91.108.56.0/22",
- "91.108.4.0/22",
- "91.108.8.0/22",
- "91.108.16.0/22",
- "91.108.12.0/22",
- "149.154.160.0/20",
- "91.105.192.0/23",
- "91.108.20.0/22",
- "185.76.151.0/24" 
-  ]
-},
+	{
+	  "inboundTag": ["redirect", "tproxy"],
+	  "outboundTag": "vless-reality",
+	  "type": "field",
+	  "network": "tcp,udp",
+	  "port": "80,443,596-599,1400,5222",
+	  "ip": [
+	 "91.108.56.0/22",
+	 "91.108.4.0/22",
+	 "91.108.8.0/22",
+	 "91.108.16.0/22",
+	 "91.108.12.0/22",
+	 "149.154.160.0/20",
+	 "91.105.192.0/23",
+	 "91.108.20.0/22",
+	 "185.76.151.0/24" 
+	  ]
+	},
 
 
 	
@@ -173,6 +172,17 @@
         "type": "field",
         "network": "tcp",
         "port": "10000,11005,9339,9443,2233,543,25565"
+      },
+
+	  // Battlefield 6 открыть порты xkeen -ap xkeen -ap 80,443,20000:28000
+	  {
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "vless-reality",
+        "type": "field",
+        "ip": [
+		"ext:geoip_zkeenip.dat:akamai",
+		"ext:geoip_zkeenip.dat:amazon"
+        ]
       },
 	    
      // Discord 50000:50030
