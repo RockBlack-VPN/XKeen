@@ -174,7 +174,7 @@
         "port": "10000,11005,9339,9443,2233,543,25565"
       },
 
-	  // Battlefield 6 открыть порты xkeen -ap xkeen -ap 80,443,20000:28000
+	  // Battlefield 6 открыть порты xkeen -ap 80,443,20000:28000
 	  {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
