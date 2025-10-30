@@ -179,6 +179,13 @@
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
         "type": "field",
+		"network": "tcp,udp",
+        "port": "20000-28000"
+         },
+        {
+        "type": "field",
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "vless-reality",
         "ip": [
 		"ext:geoip_zkeenip.dat:akamai",
 		"ext:geoip_zkeenip.dat:amazon"
