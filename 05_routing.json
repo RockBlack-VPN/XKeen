@@ -93,6 +93,7 @@
 	"ext:geosite_v2fly.dat:spotify",
 	"ext:geosite_v2fly.dat:autodesk",
 	"ext:geosite_v2fly.dat:google-gemini",
+	"ext:geosite_v2fly.dat:google-deepmind",
 	"ext:geosite_v2fly.dat:soundcloud",
 	"ext:geosite_v2fly.dat:linkedin",
 	"ext:geosite_v2fly.dat:notion",
