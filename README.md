@@ -79,15 +79,15 @@ system configuration save
 ```
 
 > [!TIP]
-> `xkeen generator` - https://rockblack.pro/xkeen_generator
+> `xkeen generator` - https://rockblack.info/xkeen_generator
 > 
 > `routing generator` -https://xray-routing-generator.netlify.app
 > 
-> `mihomo generator` - https://rockblack.pro/mihomo_generator
+> `mihomo generator` - https://rockblack.info/mihomo_generator
 > 
-> `MiniToolPartitionWizard 12.8` - [Скачать](https://rockblack.pro/soft/MiniToolPartitionWizard.zip)
+> `MiniToolPartitionWizard 12.8` - [Скачать](https://rockblack.info/soft/MiniToolPartitionWizard.zip)
 >
->  `MobaXterm 24.1` - [Скачать](https://rockblack.pro/soft/MobaXterm.zip)
+>  `MobaXterm 24.1` - [Скачать](https://rockblack.info/soft/MobaXterm.zip)
 ____
 
 # Обновление ядра XRAY на роутере Keenetic
