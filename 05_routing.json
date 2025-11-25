@@ -282,6 +282,16 @@
           "bittorrent"
         ]
       },
+
+	      {
+        "inboundTag": ["redirect", "tproxy"],
+        "outboundTag": "direct",
+        "type": "field",
+        "domain": [
+          "wink.ru",
+          "ngenix.net"
+        ]
+      },
       // Прямое подключение  |  Все остальное
       {
         "inboundTag": ["redirect", "tproxy"],
