@@ -51,7 +51,10 @@
 ```
 opkg update && opkg upgrade
 ```
-**Устанавливаем Xkeen**
+**Установка архиваторов**
+```
+opkg install curl tar unzip && 
+```
 
 ```
 opkg install curl
