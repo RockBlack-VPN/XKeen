@@ -55,10 +55,11 @@ opkg update && opkg upgrade
 ```
 opkg install curl tar unzip && 
 ```
-
+**Установка curl**
 ```
 opkg install curl
 ```
+
 ```
 curl -sOfL https://raw.githubusercontent.com/RockBlack-VPN/XKeen/main/install.sh
 ```
