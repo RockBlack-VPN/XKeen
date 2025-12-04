@@ -60,7 +60,7 @@ chmod +x ./install.sh && ./install.sh
 
 Данная команда вводится в CLI роутера
 ```
-ip http ssl port 8443
+ip http ssl port 5443
 ```
 Сохранить изменения
 ```
