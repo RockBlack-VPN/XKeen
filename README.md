@@ -47,7 +47,7 @@
 Логин - `root`
 Пароль - `keenetic`
 
-**Установка Entware + Xkeen**
+**Установка Xkeen**
 ```
 opkg update && opkg upgrade && \
 opkg install curl tar unzip && \
