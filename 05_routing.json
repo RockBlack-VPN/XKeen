@@ -117,6 +117,16 @@
 	"image.tmdb.org",
 	"4pda.to",
 
+	// Roblox
+	"roblox.com",
+    "robloxengine.com",
+	"rbxcdn.com",
+	"robloxcdn.com",
+	"rbxgame.com",
+	"rbxtrk.com",
+	"robloxlabs.com",
+	"rbxes.com",
+
 	// kino.pub
 	"firebase-settings.crashlytics.com",
 	"firebaseinstallations.googleapis.com",
@@ -246,6 +256,17 @@
         ]
       },
 
+     // Roblox порты xkeen -ap 80,443,49152:65535
+	{
+  		"inboundTag": ["redirect", "tproxy"],
+ 		"outboundTag": "vless-reality",
+  		"type": "field",
+  		"network": "tcp,udp",
+  		"port": "49152-65535",
+		"ip": [
+	    "128.116.0.0/17"
+					]
+	  },
 
 	 // Для работы WhatsApp открыть порты xkeen -ap 80,443,3478,46420
 	{
