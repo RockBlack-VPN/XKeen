@@ -47,27 +47,12 @@
 Логин - `root`
 Пароль - `keenetic`
 
-**Обновляем Entware**
+**Установка Entware + Xkeen**
 ```
-opkg update && opkg upgrade
-```
-**Установка архиваторов**
-```
-opkg install curl tar unzip && 
-```
-**Установка curl**
-```
-opkg install curl
-```
-
-```
-curl -sOfL https://raw.githubusercontent.com/RockBlack-VPN/XKeen/main/install.sh
-```
-```
-chmod +x ./install.sh
-```
-```
-./install.sh
+opkg update && opkg upgrade && \
+opkg install curl tar unzip && \
+curl -sOfL https://raw.githubusercontent.com/RockBlack-VPN/XKeen/main/install.sh && \
+chmod +x ./install.sh && ./install.sh
 ```
 
 
