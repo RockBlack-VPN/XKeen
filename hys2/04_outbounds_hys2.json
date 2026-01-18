@@ -1,0 +1,46 @@
+// Пример: вставьте ваши данные на примере ключа hy2://fin13hys32:422OnZ2orRk4bLePlJYD7MtvEOumPDJkxp@119.142.54.231:1935?insecure=1&sni=google.com&obfs=salamander&obfs-password=12ZqS1h2ik5qtkMm8ZFSzb9SvnOzbTRpBO&pinSHA256=EF:AB:8B:10:AC:84:D6:FD:A3:42:CF:9F:2F:0A:D4:94:89:8E:53:FF:BC:86:D0:91:B7:1F:A1:24:55:B2:DD:25#IPv4
+{
+  "outbounds": [
+    {
+      "protocol": "hysteria",
+      "settings": {
+        "version": 2,
+        "address": "119.1742.54.231",
+        "port": 1935
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "fin13hys32:422OnZ2orRk4bLePlJYD7MtvEOumPDJkxp",
+          "congestion": "brutal",
+          "up": "500mbps",
+          "down": "500mbps",
+          "tcpFastOpen": true,
+          "recvWindowConn": 15728640,
+          "recvWindow": 62914560,
+          "disableMTUDiscovery": false
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "google.com",
+          "allowInsecure": true,
+          "alpn": ["h3"]
+        },
+        "udpmasks": [
+          {
+            "type": "salamander",
+            "settings": {
+              "password": "12ZqS1h2ik5qtkMm8ZFSzb9SvnOzbTRpBO"
+            }
+          }
+        ]
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "tag": "direct"
+    }
+  ]
+}
