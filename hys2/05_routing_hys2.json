@@ -2,22 +2,14 @@
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
-      // SOCKS inbound идет через proxy
+      // SOCKS inbound РёРґРµС‚ С‡РµСЂРµР· proxy
       {
         "type": "field",
         "inboundTag": ["socks-inbound"],
         "outboundTag": "proxy"
       },
-
-      // Блокировка quic
-      {
-        "network": "udp",
-        "port": "443",
-        "outboundTag": "block",
-        "type": "field"
-      },
-      
-      // Блокировка | Уязвимые UDP порты
+     
+      // Р‘Р»РѕРєРёСЂРѕРІРєР° | РЈСЏР·РІРёРјС‹Рµ UDP РїРѕСЂС‚С‹
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "block",
@@ -26,7 +18,7 @@
         "port": "135, 137, 138, 139"
       },
       
-      // Блокировка | Реклама и аналитика
+      // Р‘Р»РѕРєРёСЂРѕРІРєР° | Р РµРєР»Р°РјР° Рё Р°РЅР°Р»РёС‚РёРєР°
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "block",
@@ -42,7 +34,7 @@
         ]
       },
       
-      // Proxy подключение | IP адреса Google, Twitter
+      // Proxy РїРѕРґРєР»СЋС‡РµРЅРёРµ | IP Р°РґСЂРµСЃР° Google, Twitter
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "proxy",
@@ -53,7 +45,7 @@
         ]
       },
 
-      // Proxy подключение | Для работы Telegram
+      // Proxy РїРѕРґРєР»СЋС‡РµРЅРёРµ | Р”Р»СЏ СЂР°Р±РѕС‚С‹ Telegram
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "proxy",
@@ -77,7 +69,7 @@
         ]
       },
 
-      // Proxy подключение | Доменные имена
+      // Proxy РїРѕРґРєР»СЋС‡РµРЅРёРµ | Р”РѕРјРµРЅРЅС‹Рµ РёРјРµРЅР°
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "proxy",
@@ -186,7 +178,7 @@
         ]
       },
       
-      // Proxy подключение | Игры и приложения порты
+      // Proxy РїРѕРґРєР»СЋС‡РµРЅРёРµ | РРіСЂС‹ Рё РїСЂРёР»РѕР¶РµРЅРёСЏ РїРѕСЂС‚С‹
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "proxy",
@@ -195,7 +187,7 @@
         "port": "10000,11005,9339,9443,2233,543,25565"
       },
 
-      // Proxy подключение | Battlefield 6
+      // Proxy РїРѕРґРєР»СЋС‡РµРЅРёРµ | Battlefield 6
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "proxy",
@@ -214,7 +206,7 @@
         ]
       },
       
-      // Proxy подключение | Discord
+      // Proxy РїРѕРґРєР»СЋС‡РµРЅРёРµ | Discord
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "proxy",
@@ -261,7 +253,7 @@
         ]
       },
 
-      // Proxy подключение | Roblox
+      // Proxy РїРѕРґРєР»СЋС‡РµРЅРёРµ | Roblox
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "proxy",
@@ -276,7 +268,7 @@
         ]
       },
 
-      // Proxy подключение | WhatsApp
+      // Proxy РїРѕРґРєР»СЋС‡РµРЅРёРµ | WhatsApp
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "proxy",
@@ -311,7 +303,7 @@
         ]
       },
 
-      // Прямое подключение | BitTorrent
+      // РџСЂСЏРјРѕРµ РїРѕРґРєР»СЋС‡РµРЅРёРµ | BitTorrent
       {
         "type": "field",
         "inboundTag": ["redirect", "tproxy"],
@@ -321,7 +313,7 @@
         ]
       },
 
-      // Прямое подключение | Домены
+      // РџСЂСЏРјРѕРµ РїРѕРґРєР»СЋС‡РµРЅРёРµ | Р”РѕРјРµРЅС‹
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "direct",
@@ -332,7 +324,7 @@
         ]
       },
       
-      // Прямое подключение | Все остальное
+      // РџСЂСЏРјРѕРµ РїРѕРґРєР»СЋС‡РµРЅРёРµ | Р’СЃРµ РѕСЃС‚Р°Р»СЊРЅРѕРµ
       {
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "direct",
