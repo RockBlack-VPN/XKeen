@@ -68,7 +68,6 @@ system configuration save
 ```
 
 > [!TIP]
-> `xkeen generator` - https://rockblack.info/xkeen_generator
 > 
 > `routing generator` -https://xray-routing-generator.netlify.app
 > 
