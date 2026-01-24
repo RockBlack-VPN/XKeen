@@ -1,6 +1,6 @@
 #!/bin/sh
 
-url="https://github.com/RockBlack-VPN/XKeen/releases/download/xkeen-v1.1.3.8/xkeen.tar.gz"
+url="https://github.com/RockBlack-VPN/XKeen/releases/download/xkeen-v1.1.3.9/xkeen.tar.gz"
 if ! curl -OL --connect-timeout 10 -m 60 "$url"; then
     if ! curl -OL --connect-timeout 10 -m 60 "https://gh-proxy.com/$url"; then
         if ! curl -OL --connect-timeout 10 -m 60 "https://ghfast.top/$url"; then
