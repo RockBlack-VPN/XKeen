@@ -120,6 +120,7 @@
 	"grok.com",
 
 	// Roblox
+    "ext:geosite_v2fly.dat:roblox",
 	"roblox.com",
     "robloxengine.com",
 	"rbxcdn.com",
