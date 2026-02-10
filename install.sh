@@ -10,5 +10,5 @@ if ! curl -OL --connect-timeout 10 -m 60 "$url"; then
     fi
 fi
 
-tar -xvzf xkeen.tar.gz -C /opt/sbin > /dev/null && rm xkeen.tar
+tar -xvzf xkeen.tar -C /opt/sbin > /dev/null && rm xkeen.tar
 xkeen -i
