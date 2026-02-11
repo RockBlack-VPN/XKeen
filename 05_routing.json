@@ -25,7 +25,6 @@
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "block",
         "domain": [
-          "google-analytics",
           "analytics.yandex",
           "appcenter.ms",
           "app-measurement.com",
