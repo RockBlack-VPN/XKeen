@@ -25,7 +25,6 @@
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "block",
         "domain": [
-          "ext:geosite_v2fly.dat:category-ads-all",
           "google-analytics",
           "analytics.yandex",
           "appcenter.ms",
