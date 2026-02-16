@@ -88,6 +88,7 @@
 
 
     "ext:geosite_v2fly.dat:openai",
+	"ext:geosite_v2fly.dat:speedtest",
     "ext:geosite_v2fly.dat:discord",
     "ext:geosite_v2fly.dat:twitter",
 	"ext:geosite_v2fly.dat:youtube",
