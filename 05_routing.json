@@ -231,9 +231,9 @@
         "inboundTag": ["redirect", "tproxy"],
         "outboundTag": "vless-reality",
         "ip": [
-            "ext:zkeenip.dat:discord",
-            "ext:zkeenip.dat:cloudflare",
-            "ext:zkeenip.dat:google"
+	"ext:zkeenip.dat:discord",
+	"ext:zkeenip.dat:cloudflare",
+	"ext:zkeenip.dat:google"
         ]
       },
 
