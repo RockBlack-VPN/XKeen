@@ -49,15 +49,6 @@
         "enabled": true,
         "destOverride": ["http", "tls", "quic"]
       }
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 11111,
-      "protocol": "dokodemo-door",
-      "settings": {
-        "address": "127.0.0.1"
-      },
-      "tag": "metrics_in"
     }
   ]
 }
