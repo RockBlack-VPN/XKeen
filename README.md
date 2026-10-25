@@ -143,6 +143,8 @@ opkg update && opkg upgrade && opkg install curl tar && cd /tmp
 curl -sSfLO https://raw.githubusercontent.com/RockBlack-VPN/XKeen/main/install.sh && sh ./install.sh
 ```
 
+Архив актуальной стабильной версии также публикуется в [Releases](https://github.com/RockBlack-VPN/XKeen/releases/latest) этого репозитория.
+
 Если установка не начинается из-за недоступности Entware (`bin.entware.net`), замените ссылку на рабочее зеркало и повторите команду:
 
 ```
@@ -234,13 +236,7 @@ system configuration save
 >
 > `routing generator` — https://xray-routing-generator.netlify.app
 >
-> `mihomo+xray generator` — https://generator.rockblack.pro/
->
 > `XKeen UI` — https://github.com/zxc-rv/XKeen-UI
->
-> `MiniToolPartitionWizard 12.8` — [Скачать](https://rockblack.info/soft/MiniToolPartitionWizard.zip)
->
-> `MobaXterm 24.1` — [Скачать](https://rockblack.info/soft/MobaXterm.zip)
 
 ____
 
@@ -307,8 +303,6 @@ rm -f /opt/var/run/dropbear.pid
 
 После этого подключайтесь по SSH к Entware
 
-![Screenshot](https://rockblack.pro/images/github/Screenshot_2.jpg)
-
 ____
 
 # Backup Entware + XKeen
@@ -362,8 +356,6 @@ xkeen -ap 80,443,19200:19400,50000:50030
       },
 ```
 
-![Screenshot](https://rockblack.pro/images/xray/Screenshot_270.jpg)
-
 **2-й способ** — по IP-адресам (геобаза ZKeenIP):
 
 ```
@@ -378,8 +370,6 @@ xkeen -ap 80,443,19200:19400,50000:50030
         ]
       },
 ```
-
-![Screenshot](https://rockblack.pro/images/xray/Screenshot_89.jpg)
 
 ## Supercell
 
@@ -399,8 +389,6 @@ xkeen -ap 80,443,9339
       },
 ```
 
-![Screenshot](https://rockblack.pro/images/xray/Screenshot_271.jpg)
-
 ## Throne and Liberty
 
 ```
@@ -416,8 +404,6 @@ xkeen -ap 80,443,10000,11005
         "port": "10000,11005"
       },
 ```
-
-![Screenshot](https://rockblack.pro/images/xray/Screenshot_272.jpg)
 
 ## Telegram
 
@@ -440,8 +426,6 @@ xkeen -ap 80,443,596:599,1400,5222
       },
 ```
 
-![Screenshot](https://rockblack.pro/images/xray/Screenshot_295.jpg)
-
 ____
 
 ## Ссылки
@@ -451,9 +435,6 @@ ____
 - FAQ — https://github.com/jameszeroX/XKeen/wiki/FAQ
 - Xray-core — https://github.com/XTLS/Xray-core
 - Mihomo — https://github.com/MetaCubeX/mihomo
-
-> [!TIP]
-> [VPN на роутер](https://rockblack.pro/price) — WireGuard, AmneziaWG, OpenVPN, Vless, Outline, Socks5
 
 > [Телеграм-бот](https://t.me/Cripto_Plusbot)
 
