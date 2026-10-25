@@ -1,0 +1,75 @@
+name: Sync XKeen release
+
+# Публикует в этом репозитории актуальный стабильный релиз XKeen
+# из jameszeroX/XKeen (тег вида xkeen-v2.1) с архивом xkeen.tar.gz.
+# Запускается при изменении этого файла, вручную и раз в сутки.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/sync-release.yml
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-release
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      UPSTREAM: jameszeroX/XKeen
+    steps:
+      - name: Sync latest stable release
+        run: |
+          set -eu
+
+          up=$(gh release view --repo "$UPSTREAM" --json tagName --jq .tagName)
+          case "$up" in
+            ""|*[!A-Za-z0-9._-]*) echo "Некорректный тег релиза: '$up'" >&2; exit 1 ;;
+          esac
+          tag="xkeen-v$up"
+          echo "Upstream stable: $up -> $tag"
+
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Релиз $tag уже опубликован"
+            exit 0
+          fi
+
+          mkdir -p assets
+          gh release download "$up" --repo "$UPSTREAM" --dir assets --pattern 'xkeen.tar.gz'
+          gh release download "$up" --repo "$UPSTREAM" --dir assets --pattern '*.json' || true
+          tar -tzf assets/xkeen.tar.gz >/dev/null
+          (cd assets && sha256sum -- * > ../SHA256SUMS) && mv SHA256SUMS assets/
+          cat assets/SHA256SUMS
+
+          cat > notes.md << EOF
+          XKeen **$up** — стабильная версия из [jameszeroX/XKeen](https://github.com/$UPSTREAM/releases/tag/$up).
+
+          Список изменений: https://github.com/$UPSTREAM/releases/tag/$up
+
+          ### Установка
+
+          \`\`\`
+          opkg update && opkg upgrade && opkg install curl tar && cd /tmp
+          curl -sSfLO https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/install.sh && sh ./install.sh --stable
+          \`\`\`
+
+          Для KeeneticOS 5.2 перед установкой добавьте токен RCI в \`/opt/etc/xkeen/xkeen.json\` — см. [README](https://github.com/$GITHUB_REPOSITORY#подготовка-роутера-c-keeneticos-52).
+
+          Обновление уже установленного XKeen: \`xkeen -uk\`
+          EOF
+
+          gh release create "$tag" assets/* \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "XKeen $up" \
+            --notes-file notes.md \
+            --latest
