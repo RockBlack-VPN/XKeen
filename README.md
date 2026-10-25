@@ -436,6 +436,6 @@ ____
 - Xray-core — https://github.com/XTLS/Xray-core
 - Mihomo — https://github.com/MetaCubeX/mihomo
 
-> [Сайи](https://my.rockblack.tech)
+> [Сайт](https://my.rockblack.tech)
 
 > [Телеграм-группа](https://t.me/rockblack_vpn)
